@@ -20,35 +20,3 @@
 
 {'id': 5, 'nome': 'Sprite', 'preço': 5.79}
 """
-
-class Produto:
-
-    def __init__(self):
-        self.produtos = []
-
-    def criar_produto(self, id, nome, preco):
-        self.produtos.append({"id": id, "nome": nome, "preço": preco})
-
-
-produto = Produto()
-produto.criar_produto(1, "coca-cola", 5.79)
-produto.criar_produto(1, "coca-cola", 5.79)
-produto.criar_produto(1, "coca-cola", 5.79)
-produto.criar_produto(1, "coca-cola", 5.79)
-
-
-class Escritor:
-
-    def escrever(self, dados_produto):
-        with open("products.txt", "a") as file:
-            for item in produto.produtos:
-                file.write(str(item) + "\n")
-
-    def ler_registros(self):
-        with open("products.txt", "r") as file:
-            for product in file.readlines():
-                print(product)
-
-
-molde = Escritor()
-molde.ler_registros()
