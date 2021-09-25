@@ -16,14 +16,7 @@
 # instanciando a classe filha temos as mesmas caracteristicas da classe Pai
 # Exemplo:
 
-class Animal:
-    def __init__(self, patas, calda, som):
-        self.patas = patas
-        self.calda = calda
-        self.som = som
 
-    def emitir_som(self):
-        print(self.som)
 
     # Aqui temos a classe Animal que é a classe pai nesse exemplo:
     # Se quisermos uma classe Cachorro por exemplo teriamos que repetir o mesmo código na classe Cachorro
@@ -35,17 +28,30 @@ class Animal:
 # Para herdar devemos criar a classe filha e nesta classe ao final do nome abrimos dois parenteses ()
 # e passamos para esse parenteses o nome da classe Pai
 # Exemplo:
+class Animal:
+    def __init__(self, patas, calda, som):
+        self.patas = patas
+        self.calda = calda
+        self.som = som
+
+    def emitir_som(self):
+        print(self.som)
 
 class Cachorro(Animal):
-    pass
-
+    
+    def nadar(self):
+        print("Sou um cachorro estou nadando")
 
 class Cobra(Animal):
-    pass
+    
+    def subir_em_arvores(self):
+        print("Sou uma cobra e estou subindo na arvore")
 
 
-Cachorro(patas=4, calda=True, som="Au au au").emitir_som()
-Cobra(patas=0, calda=True, som="ZZZzzzzZZZzzzzZ").emitir_som()
+cachorro = Cachorro(patas=4, calda=True, som="Au au au")
+cachorro.emitir_som()
+cachorro.nadar()
 
-# Percebam que dentro das classes Cachorro e Cobra não existe nenhum comportamento
-# Então dessa forma podemos ver que as classes Filhas herdaram de fato o comportamento da classe Pai
+cobra = Cobra(patas=0, calda=True, som="ZZZzzzzZZZzzzzZ")
+cobra.emitir_som()
+cobra.subir_em_arvores()
