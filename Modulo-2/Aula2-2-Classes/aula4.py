@@ -29,6 +29,7 @@ class Produto:
     def configurar_valor(self, valor):
         self.__valor = valor
     
+    # 
     def __falar_algo(self):
         print("Falando Algo")
 

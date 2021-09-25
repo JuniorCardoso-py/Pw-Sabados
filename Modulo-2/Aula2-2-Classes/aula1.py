@@ -1,5 +1,4 @@
 
-
 class Pessoa:
     fruta = "'Abacaxi' "
     
