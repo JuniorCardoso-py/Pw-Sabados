@@ -28,6 +28,4 @@ digite um nome:
 digite um valor:
 digite um categoria:
 
-
-
 """

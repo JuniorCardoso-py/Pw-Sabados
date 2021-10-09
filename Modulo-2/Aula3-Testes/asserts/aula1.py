@@ -1,24 +1,37 @@
-# Para garantir o comportamento de uma denominada aplicação é muito importante que tenhamos testes sobre a nossa aplicação
+import unittest
+from unittest import TestCase
 
-# Nessa secção veremos sobre o uso de asserts com unittest para verificar
-# a veracidade do comportamento da função
+class Test(TestCase):
 
-# para gerar um teste devemos utilizar a palavra reservada assert
+    def test_aprendendo_testar(self):
+        assert 1 == 1
 
-# Exemplo:
+    def test_strigs(self):
+        assert "1" == "1"
+    
+    def test_boleanos(self):
+        assert True == True
 
-assert 1 == 1
-# assert 1 == "1"
-# assert 1 == 0
+    def test_booleano_dois(self):
+        a = "Teste"
+        assert bool(a)
+    
+    def test_varios_testes(self):
+        a = "Teste"
+        b = "Teste"
+        c = ""
+        assert a == b or a == c
+        # or == palavra `OU`
+        # a é igual a b ou a é igual a c?
 
-# podemos utilizar as condicionais para validar os testes.
-# Exemplos:
+    def test_com_and(self):
+        a = "Teste"
+        b = "Teste"
+        c = ""
+        assert a == b and a == c
+    
+    def test_valor_inteiro(self):
+        assert isinstance(1, int)
 
-lista_frutas = ["laranja", "uva", "abacaxi", "melancia"]
-
-assert "laranja" in lista_frutas
-# assert "laranja" not in lista_frutas
-# assert not True
-# assert not False
-
-assert "laranja" in lista_frutas and len(lista_frutas) > 3
+if __name__ == "__main__":
+    unittest.main()
