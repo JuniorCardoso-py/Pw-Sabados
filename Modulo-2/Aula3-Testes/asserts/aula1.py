@@ -28,10 +28,19 @@ class Test(TestCase):
         a = "Teste"
         b = "Teste"
         c = ""
-        assert a == b and a == c
+        assert a == b and a != c
     
     def test_valor_inteiro(self):
-        assert isinstance(1, int)
+        assert isinstance(123681726, int)
+        assert isinstance("Sou uma string", str)
+        assert isinstance(12.25, float)
+
+    def test_com_not(self):
+        a = "Teste"
+        b = "Teste"
+        c = ""
+        assert a == b and not c
+
 
 if __name__ == "__main__":
     unittest.main()

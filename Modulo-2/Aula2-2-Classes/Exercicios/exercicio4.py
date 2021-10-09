@@ -224,4 +224,5 @@ class Register(Produtos):
         self.callback() if self.continuar_no_sistema() == 1 else print("Obrigado volte sempre")
 
 
+
 cadastrar = Register()
