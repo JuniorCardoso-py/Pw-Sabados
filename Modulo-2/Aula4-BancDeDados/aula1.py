@@ -46,6 +46,21 @@
 # - INSERT INTO nome_da_tabela Values (`nome_dos_campos`, `separados_por_virgula`); Este comando insere dados na tabela
 # - DROP DATABASE nome_da_base_de_dados; Este comando deleta a base de dados inteira
 # - CREATE DATABASE nome_da_base_de_dados; Este comando cria uma base de dados
+
+# - CREATE TABLE nome_da_tabela (
+#    ---Dentro da tabela inserimos os dados com os seus respectivos `tipos` e configurações
+#   
+#    id int not null primary key,  --- Nessa parte criamos uma coluna com o nome de `id` ela sera do tipo 
+#                                       inteiro(integer), not null = não pode ser vazia,
+#                                       primary key = é o identificar unico desta tabela não pode se repetir, 
+#                                       a primary key é utilizada para criarmos relações entre outras tabelas. 
+#
+#   nome varchar(60) not null, --- Nesta parte criamos uma coluna com o nome de `nome`, varchar significa que 
+#                                  ela sera do tipo string varchar(60) significa que ela tera no maximo 60 caracteres
+
+#   preco decimal(5,2) --- Nesta parte criamos uma coluna com o nome de `preco`, decimal(5,2) siginifica que podera ser
+#                          um numero decimal de 5 casas sendo 2 após a virgula.
+# );
 # 
 # - Outros comandos uteis são:
 #   - USE nome_da_base_de_dados; Este comando seleciona a base de dados a ser usado no script do nosso SGBD.
